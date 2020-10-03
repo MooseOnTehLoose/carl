@@ -4,7 +4,7 @@ RUN mkdir /opt/carl
 WORKDIR /opt/carl
 
 COPY cudaPi.cu /opt/carl/cudaPi.cu
-RUN nvcc cudaPi.cu -o cudaPi && chmod +x cudaPi
+RUN nvcc cudaPi.cu -o cudaPi && chmod +x cudaPi && rm cudaPi.cu
 
 COPY gpuTest.sh /opt/carl/gpuTest.sh
 RUN chmod +x gpuTest.sh
