@@ -7,7 +7,9 @@ Carl is designed to provide flexible gpu load testing for your kubernetes cluste
 To deploy, simply run
 ```kubectl apply -f https://carl.yaml```
 
-By default Carl only deploys a single pod since you need at least one GPU enabled worker to utilize this workload. After deployment you can scale up the number of replicas to ensure all nodes can accept your gpu workload. The default taints Carl can tolerate are:
+By default Carl only deploys a single pod since you need at least one GPU enabled worker to utilize this workload. After deployment you can scale up the number of replicas to ensure all nodes can accept your gpu workload. 
+
+The default taints Carl can tolerate are:
 ```
       tolerations:
       - key: "dedicated"
