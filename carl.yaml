@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: carl-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      name: carl-gpu-deploy
+  template:
+    metadata:
+      labels:
+        name: carl-gpu-deploy
+
+    spec:
+      containers:
+      - name: carl
+        image: mooseontehloose/carl:v1.0.0
+        command: ["/opt/carl/gpuTest.sh"]
+        args: ["16384"]
+        resources:
+          limits:
+            nvidia.com/gpu: 1
+      tolerations:
+      - key: "dedicated"
+        operator: "Equal"
+        value: "gpu-worker"
+        effect: "NoExecute"
