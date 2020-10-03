@@ -15,7 +15,7 @@ To deploy, either run
 
 Or download and modify the deployment yaml before applying:
 
-```curl -o 
+```curl -o ```
 
 By default Carl only deploys a single pod since you need at least one GPU enabled worker to utilize this workload. After deployment you can scale up the number of replicas to ensure all nodes can accept your gpu workload. 
 
