@@ -1,4 +1,14 @@
 #!/bin/bash
-nvidia-smi | tee /opt/carl/nvidia-smi.txt
-./cudaPi 16384 | tee /opt/carl/cudaPi.txt
-sleep 900
+
+blocks=512
+if ! [ -z "$1" ]; then
+    blocks=$1
+fi
+while true 
+do
+    echo -e "nvidia-smi: \n"
+    nvidia-smi
+    echo -e "\ncalculate pi: \n"
+    /opt/carl/cudaPi $blocks
+    sleep 60
+done
