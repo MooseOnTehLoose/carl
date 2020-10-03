@@ -10,8 +10,12 @@ You must also have the Nvidia device plugin deployed to your cluster: https://gi
 
 ## Usage
 
-To deploy, simply run
+To deploy, either run
 ```kubectl apply -f https://carl.yaml```
+
+Or download and modify the deployment yaml before applying:
+
+```curl -o 
 
 By default Carl only deploys a single pod since you need at least one GPU enabled worker to utilize this workload. After deployment you can scale up the number of replicas to ensure all nodes can accept your gpu workload. 
 
