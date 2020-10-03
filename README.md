@@ -11,6 +11,7 @@ You must also have the Nvidia device plugin deployed to your cluster: https://gi
 ## Usage
 
 To deploy, either run
+
 ```kubectl apply -f https://carl.yaml```
 
 Or download and modify the deployment yaml before applying:
