@@ -30,7 +30,3 @@ The default taints Carl can tolerate are:
 ```
         
 Carl requests only a single gpu for each pod, multi-gpu per pod will be tested later. 
-
-## TODO
-
-Support for exporting system logs 
