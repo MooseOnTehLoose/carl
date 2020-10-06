@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: carl
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       name: carl-gpu-deploy
